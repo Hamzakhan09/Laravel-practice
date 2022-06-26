@@ -20,7 +20,16 @@ class HomeController extends Controller
 
 
     public function formData(Request $request){
-       echo "<pre>";     
-      print_r($request->all());
+  
+      $request->validate(
+          [       
+                  'email'=> 'required|email',         
+                  'password'=> 'required'         
+          ]
+      ); 
+
+        echo "Your Email : ". $request->email;
+        echo "<br>";
+        echo "Your Password : ". $request->password;
     }
 }
