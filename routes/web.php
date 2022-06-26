@@ -30,3 +30,11 @@ Route::get('/demo/{name}',function($name){
 });
 
 Route::get('/user', [HomeController::class , 'Index']);
+
+Route::get('/form',function(){
+     return view('form');
+});
+
+
+Route::post('/form', [HomeController::class , 'formData']);
+

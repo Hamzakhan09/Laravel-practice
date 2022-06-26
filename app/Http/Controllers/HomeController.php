@@ -17,4 +17,10 @@ class HomeController extends Controller
 
         return view('user_data',['student'=>$st]);
     }
+
+
+    public function formData(Request $request){
+       echo "<pre>";     
+      print_r($request->all());
+    }
 }
